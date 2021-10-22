@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ngan</title>
+    <style>
+        :root {
+            --primary: #fb3c7f;
+            --secondary: #7931f5;
+            --white: #fff;
+            --black: #000;
+            --black07: rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fff;
+        }
+
+        .header {
+            width: 100%;
+            padding: 2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 1 rem;
+        }
+
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__logo {
+            height: 40px;
+            margin: 10px;
+        }
+
+        .header__navlinks {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .header__navlinks>li {
+            position: relative;
+            margin: 0 1.5rem;
+        }
+
+        .header__navlinks>li>a {
+            display: flex;
+            align-items: center;
+            padding: 4rem 6 rem;
+            color: white
+        }
+
+        .header__navlinks>li>a>span {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin: 10px;
+        }
+
+        .header__navlinks>li:hover>a>span {
+            color: var(--secondary);
+        }
+
+        .header__navlinks>li:hover>.header__navlink__dropdown {
+            display: block;
+        }
+
+        .header__navlink__dropdown {
+            position: absolute;
+            border-radius: 5px 10px;
+            width: 120px;
+            height: 150px;
+            background-color: white;
+            z-index: 1;
+            list-style-type: none;
+            padding: 1rem;
+            display: none;
+        }
+
+        .header__navlink__dropdown>li {
+            padding: 10px 20px;
+            text-transform: capitalize;
+            text-align: center;
+            line-height: 5px;
+        }
+
+        .header__navlink__dropdown>li:hover {
+            color: var(--secondary);
+            display: block;
+        }
+        .header__actions .login_button {
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 0.25rem;
+            text-transform: uppercase;
+            padding: 0.75rem 2rem;
+            cursor: pointer;
+            text-align: center;
+            transition-timing-function: ease-in-out;
+            display: inline-block;
+            font-size:15px;
+            font-weight: bold;
+            border: none;
+        }
+        .introduction__content {
+            position: absolute;
+            left: 1;
+            top: 6rem;
+            width: 100%;
+            padding: 13.5rem 0;
+        }
+        .introduction__container {
+            display: flex;
+            align-items: left;
+            color: var(--white);
+        }
+        .introduction__overview {
+            width: 80%;
+            font-size:20px;
+            padding-right: 1.5rem;
+        }
+        .introduction__overview h2{
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+        .introduction__overview p {
+            margin-bottom:20px ;
+        }
+        .introduction__image img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            animation:moveraround  3s infinite;
+        }
+        @keyframes moveraround {
+            0% {
+   	            bottom: 0;
+   	            left: 50px;
+             }
+            33% {
+   	            bottom: 50px;
+   	            left: 50px;
+            }
+            66% {
+            	bottom: 50px;
+   	            left: 40px;
+            }
+            100% {
+   	            bottom: 0;
+   	            left: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__logo">
+                <img src="./images/logo.png" />
+            </div>
+            <ul class="header__navlinks">
+                <li class="header__navlink">
+                    <a href="#">
+                        <span> Home</span>
+                    </a>
+                </li>
+                <li class="header__navlink">
+                    <a href="#">
+                        <span> Pages</span>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="header__navlink__dropdown">
+                        <a href="/#">
+                            <li> Item 1</li>
+                        </a>
+                        <a href="/#">
+                            <li> Item 2</li>
+                        </a>
+                        <a href="/#">
+                            <li> Item 3</li>
+                        </a>
+                        <a href="/#">
+                            <li> Item 4</li>
+                        </a>
+                        <a href="/#">
+                            <li> Item 5</li>
+                        </a>
+                    </ul>
+                <li class="header_navlink">
+                    <a href="#">
+                        <span> Features</span>
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <ul class="header__navlink__dropdown">
+                        <a href="/#">
+                            <li> Item 1</li>
+                        </a>
+                        <a href="/#">
+                            <li> Item 2</li>
+                        </a>
+                        <a href="/#">
+                            <li> Item 3</li>
+                        </a>
+                    </ul>
+                </li>
+                <li class="header__navlink">
+                    <a href="/#">
+                        <span> Why us?</span>
+                    </a>
+                </li>
+                <li class="header__navlink">
+                    <a href="/#">
+                        <span> Overview</span></a>
+                </li>
+            </ul>
+            <div class="header__actions">
+                <button class="login_button">Login</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="introduction">
+            <div class="introduction__background">
+                <img src="./images/background.png" />
+            </div>
+            <div class="introduction__content">
+                <div class="introduction__container container">
+                    <div class="introduction__overview">
+                        <h2>Smart Apps for Next-Gen Utility Operations </h2>
+                        <p> Capture and retrieve your lists across devices to help you stay organized at work, home and
+                            on the go.</p>
+                        <div class="introduction__store">
+                            <img src="./images/appstore.png" />
+                            <img src="./images/google-play.png" />
+                        </div>
+                    </div>
+                    <div class="introduction__image">
+                        <img src="./images/phone.png" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
